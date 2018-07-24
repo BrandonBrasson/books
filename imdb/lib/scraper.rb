@@ -1,5 +1,5 @@
 require 'nokogiri'
-module imdb
+module IMDB
   class << self
 
     def call

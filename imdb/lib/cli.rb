@@ -1,5 +1,5 @@
-module Superhuman
-class cli
+module SUPERHUMAN
+class CLI
 
 
 
