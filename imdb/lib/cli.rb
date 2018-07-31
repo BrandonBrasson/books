@@ -1,30 +1,43 @@
-module SUPERHUMAN
-class CLI
+class IMDB::CLI
 
+  def call
 
-
-
-  def powers
-    Superhuman strength.
-    Superhuman speed.
-    Superhuman senses (including telescopic vision, x-ray vision, superhuman hearing, microscopic vision)
-    Invulnerability.
-    Superhuman breath.
-    Flight (initially enhanced jumping, super-leaping)
-    Vocal abilities, including ventriloquism.
-    end
-
-  def weaknesses
-   Kryptonite
-    end
   end
 
-  def Treatments_include
-    diet
-    exercise
-    medication
-    end
-  end
+ def list_xrp
+  puts "welcome user:"
+  puts <<-doc.gsub/^\s*/,''
+   1.ripple The world’s only enterprise blockchain solution for global payments!
+ DOC
+end
 
-end # class Cli
-end # module superhuman
+def menu
+  puts "enter the number of the if you want to know more about ripple or type exit to leave site"
+   input =nil
+  while input = != "exit"
+    gets.strip.downcase
+    case input
+  when "1"
+    puts "more info on ripple 1..."
+  end
+ end
+end
+
+
+def goodbye
+  puts  "see you later"
+end
+
+def why
+  puts "why should you buy ripple its in your best interest to buy xrp "
+end
+
+ def xrp
+   puts "Better Than Any Blockchain"
+ end
+
+def fast
+  puts "Instant, on-demand settlement"
+
+
+ end

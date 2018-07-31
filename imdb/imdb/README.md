@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Imdb
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/imdb`. To experiment with that code, run `bin/console` for an interactive prompt.
@@ -38,6 +37,3 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/'Brand
 ## Code of Conduct
 
 Everyone interacting in the Imdb project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/'BrandonBrasson'/imdb/blob/master/CODE_OF_CONDUCT.md).
-=======
-# superman
->>>>>>> 0e70eaad5cd30373adb52682bfb55b885183a15d
