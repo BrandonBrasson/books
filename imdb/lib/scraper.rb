@@ -1,36 +1,33 @@
 require 'nokogiri'
- class superman::movie
+ class Superman::Movie
 attr_accessor :name, :movie, :url, :superhero
 
-def self.hero
+def self.imdb
   #scrape imdb and wikipedia then return user to based on the data.
   self.scrape_movie
 end
 
 def self.scrape_imdb
   movie = []
-
-movie << self .scrape_wikipedia
-
-# go to imdb find superman 1978 film
-# extract the data
-# instantiate
-
- movie
-end
-
-def self.scrape_imdb
-  doc = nokogiri::HTML(open('https://www.imdb.com/title/tt0078346/' ))
-binding.pry
-end
-
-
+    
+ 
     movie << self.scrape_imdb
     movie << self.scrape_wikipedia
-
-   movie
+ 
+ movie
   end
 
+
+def self.movie
+    # Scrape imdb and wikipedia and then return deals based on that data
+    self.scrape_deals
+  end
+ 
+  
+
+
+
+    
   def self.scrape_imdb
     doc = Nokogiri::HTML(open('https://www.imdb.com/title/tt0078346/'))
 
