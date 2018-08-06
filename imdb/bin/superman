@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
 require 'bundler/setup'
-require 'Superman'
+require 'imdb'
 
 Superman::CLI.new.call
