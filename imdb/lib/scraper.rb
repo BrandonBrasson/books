@@ -43,9 +43,9 @@ def self.movie
     doc = Nokogiri::HTML(open("https://en.wikipedia.org/wiki/Superman_(1978_film)"))
 
     movie = self.new
-    movie.name = doc.<a href="/year/1978/?ref_=tt_ov_inf">1978</a>
-    movie.plot = doc.<span class="mw-headline" id="Plot">Plot</span>
-    movie.url = "https://www.imdb.com"
+    movie.name = doc .<a href="/year/1978/?ref_=tt_ov_inf">1978</a>
+    movie.plot = doc .<span class="mw-headline" id="Plot">Plot</span>
+    movie.url = "https://en.wikipedia.org/wiki/Superman_(1978_film)"
     movie.superhero = true
 
     movie
