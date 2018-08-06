@@ -16,18 +16,8 @@ def self.scrape_imdb
  
  movie
   end
-
-
-def self.movie
-    # Scrape imdb and wikipedia and then return deals based on that data
-    self.scrape_deals
-  end
- 
   
-
-
-
-    
+  
   def self.scrape_imdb
     doc = Nokogiri::HTML(open('https://www.imdb.com/title/tt0078346/'))
 
