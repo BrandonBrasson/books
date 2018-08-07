@@ -1,0 +1,15 @@
+  # WHAT IS THIS? NEED TO DEFINE IT? OR DID YOU INTEND TO CALL THE scrape_imdb and scrape_wikipedia methods?
+  
+  # TWO scrape_imdb METHODS defined below, need to reduce it to one
+  
+  
+  # IDENTIFY THE CSS SELECTORS IN THE doc VARIABLE THAT HAS THE DATA YOU WANT 
+    # AFTER IDENTIFYING, USE THE '.css' NOKOGIRI METHOD TO EXTRACT THE DATA FROM THOSE HTML OBJECTS
+    # FOR EXAMPLE YOU HAVE A CLASS CALLED .movie-info AND .movie-info HOLDS THE MOVIE iNFO, SO YOU WOULD DO THE FOLLOWING
+      #doc.css('.movie-info').each do |movie| 
+        # title = movie.css('.title').value
+        # year = movie.css('h4.year').value
+        # Superman::Superhero.new(title, year)
+      # end 
+    # AGAIN WHAT IS ABOVE IS AN EXAMPLE, NOT ACTUALLY YOUR CODE, BUT IT IS WHAT NEEDS TO HAPPEN FOR IT TO WORK
+    
