@@ -30,7 +30,6 @@ class Superman::CLI
         puts "Not sure what you want, type list or exit."
       end
     end
-  end
 
   def goodbye
     puts "goodbye have a superday"

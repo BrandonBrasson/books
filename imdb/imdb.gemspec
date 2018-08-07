@@ -5,7 +5,7 @@ require "imdb/version"
 
 Gem::Specification.new do |spec|
 spec.name          = "Imdb"
-spec.version       = Imdb::VERSION
+spec.version       = Superman::VERSION
 spec.authors       = ["'Brandon Brasson'"]
 spec.email         = ["'rocksong622@gmail.com'"]
 

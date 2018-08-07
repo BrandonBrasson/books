@@ -1,3 +1,3 @@
-module Imdb
+module Superman
   VERSION = "0.1.0"
 end
