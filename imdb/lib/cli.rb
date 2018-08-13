@@ -6,7 +6,7 @@ class Superman::CLI
     goodbye
   end
 
-  def list_movie
+  def list_movies
     # here doc - https://www.dccomics.com/characters/superman
     puts "superman comes to save us all":"
     @movie = Superman::movie.imdb
