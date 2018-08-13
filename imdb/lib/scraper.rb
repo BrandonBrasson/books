@@ -7,7 +7,7 @@ def self.imdb
   self.scrape_movie
 end
 
-def self.scrape_movie
+def self.scrape_imdb
   movie = []
 
 
