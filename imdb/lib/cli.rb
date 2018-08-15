@@ -1,3 +1,4 @@
+require 'nokogiri'
 class Superman::CLI
 
   def call
@@ -8,8 +9,8 @@ class Superman::CLI
 
   def list_movie
     # here doc - https://www.dccomics.com/characters/superman
-    puts "superman comes to save us all":"
-    @movie = Superman::movie.imdb
+    puts "superman came to save us all"
+    @movie = Superman::Movie.scrape_imdb
     @movie.each.with_index(1) do |movie, i|
       puts "#{i}. #{movie.name} - #{movie.plot} - #{movie.superhero}"
     end
@@ -30,6 +31,7 @@ class Superman::CLI
         puts "Not sure what you want, type list or exit."
       end
     end
+end
 
   def goodbye
     puts "goodbye have a superday"
