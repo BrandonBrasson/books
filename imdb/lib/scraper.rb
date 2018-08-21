@@ -1,20 +1,21 @@
-
+require 'nokogiri'
 class Superman::Movie
 attr_accessor :name, :movie, :url, :superhero
 
-#def self.imdb
+
+
+def self.movie
   #scrape imdb and wikipedia then return user to based on the data.
-#  self.scrape_imdb
-#  binding.pry
-# end
+ self.scrape_imdb
 
-def self.scrape_imdb
+end
+
+def self.scrape_movie
   binding.pry
-    movie = []
+    @movie = []
 
-
-    movie << self.scrape_imdb
-    movie << self.scrape_wikipedia
+    @movie << self.scrape_imdb
+    @movie << self.scrape_wikipedia
 
     movie
   end
@@ -28,14 +29,13 @@ def self.scrape_imdb
      movie.name = list_doc.css(".result_text a")[i].text
     #binding.pry
       #movie.plot = doc.seach "<tbody><tr><td colspan="4" class="castlist_label"></td></tr>"
-      #movie.url =
+      #movie.url = "https://www.imdb.com/title/tt0078346/"
       movie.superhero = true
+          movie
+       end
+     end
 
-    movie
-  end
-end
-
-  def self.scrape_wikipedia
+  def self.scrape_imdb
     doc = Nokogiri::HTML(open("https://www.imdb.com/find?q=superman&s=tt&exact=true&ref_=fn_al_tt_ex"))
     list_doc = doc.css("div.findSection")
     list_doc.each.with_index do |element, i|
@@ -43,12 +43,9 @@ end
       movie.name = list_doc.css(".result_text a")[i].text
     #binding.pry
       #movie.plot = doc.<span class="mw-headline" id="Plot">Plot</span>
-      #movie.url = "https://en.wikipedia.org/wiki/Superman_(1978_film)"
+      #movie.url = "https://www.imdb.com/title/tt0078346/fullcredits?ref_=tt_cl_sm#cast"
       movie.superhero = true
 
       movie
     end
   end
-
-  Superman::Movie.scrape_wikipedia
-end
