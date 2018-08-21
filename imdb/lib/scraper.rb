@@ -3,19 +3,21 @@ class Superman::Movie
 attr_accessor :name, :movie, :url, :superhero
 
 
+   #def self.superhero
+   #scrape imdb and wikipedia then return user to based on the data.
+ #  self.scrape_imdb
+ #  binding.pry
+ # end
 
-def self.movie
-  #scrape imdb and wikipedia then return user to based on the data.
- self.scrape_imdb
 
-end
 
-def self.scrape_movie
+def self.scrape_imdb
   binding.pry
-    @movie = []
+    movie = []
 
-    @movie << self.scrape_imdb
-    @movie << self.scrape_wikipedia
+
+    movie << self.scrape_imdb
+    movie << self.scrape_imdb
 
     movie
   end
@@ -49,3 +51,6 @@ def self.scrape_movie
       movie
     end
   end
+
+  Superman::Movie.scrape_imdb
+end
