@@ -9,24 +9,22 @@ class Superman::CLI
 
       def list_movie
     # here doc - "https://www.imdb.com/title/tt0078346/plotsummary?ref_=tt_stry_pl"
-    puts "superman comes to save us all"
-    @movie = Superman::Movie.superhero
-    @movie.each.with_index(1) do |movie, i|
-      puts "#{i}. #{movie.name} - #{movie.plot} - #{movie.url}"
+
+        puts "superman comes to save us all"
+        @movie = Superman::Movie.all
+        @movie.each.with_index(1) do |movie, i|
+        puts "#{i}. #{movie.name} - #{movie.plot} - #{movie.url}"
     end
   end
-
-  def list_movie
-
- end
 
 
 
       def menu
-    input = nil
-    while input != "exit"
-      puts "Superman is a 1978 superhero film directed by Richard Donner and based on the DC Comics:"
-      input = gets.strip.downcase
+        binding.pry
+        input = nil
+        while input != "exit"
+          puts "Superman is a 1978 superhero film directed by Richard Donner and based on the DC Comics:"
+          input = gets.strip.downcase
 
       if input.to_i > 0
         the_movie = @movie[input.to_i-1]
