@@ -20,17 +20,15 @@ def self.all
 
     # movie
   end
-
-
   def self.scrape_imdb
     doc = Nokogiri::HTML(open('https://www.imdb.com/title/tt0078346/fullcredits?ref_=tt_cl_sm#cast'))
-    binding.pry
-    list_doc = doc.css("div.findSection") #get selectors that will give you the data in the form of Nokogiri objects
+    list_doc = doc.css("table.cast_list").css('tr') #get a that will give you the data in the form of Nokogiri objects
     list_doc.collect.with_index do |element, i|
-      binding.pry
+        binding.pry
         movie = self.new
+
         movie.name = list_doc.css(".result_text a")[i].text
-    #binding.pry
+
       #movie.plot = doc.seach "<tbody><tr><td colspan="4" class="castlist_label"></td></tr>"
       #movie.url = "https://www.imdb.com/title/tt0078346/"
         movie.superhero = true
