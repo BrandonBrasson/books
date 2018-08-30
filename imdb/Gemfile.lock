@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    Imdb (0.1.0)
+    book: (0.1.0)
       nokogiri
 
 GEM
@@ -35,7 +35,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  Imdb!
+  Book!
   bundler (~> 1.16)
   nokogiri
   pry
