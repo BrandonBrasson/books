@@ -1,7 +1,7 @@
-equire 'nokogiri'
-class Superman::Movie
+require 'nokogiri'
+class Superman::Book
 
-  attr_accessor :name, :movie, :url, :superhero
+  attr_accessor :name, :book, :url
 
   @@all = [] # This will keep all Movie instances
 
@@ -23,23 +23,23 @@ def self.all
 
 
     # movie << self.scrape_imdb
-    @@all ||= self.scrape_imdb
+    @@all ||= self.scrape_book
     binding.pry
 
     # movie
   end
 
-  def self.scrape_imdb
+  def self.scrape_book
     doc = Nokogiri::HTML(open('https://www.imdb.com/title/tt0078346/fullcredits?ref_=tt_cl_sm#cast'))
     list_doc = doc.css("table.cast_list").css('tr') #get a that will give you the data in the form of Nokogiri objects
     list_doc.collect.with_index(1) do |element, i|
         binding.pry
-        movie = self.new
-        movie.name = list_doc.css("a")[i].text
+        book = self.new
+        book.name = list_doc.css("a")[i].text
       #movie.plot = doc.seach "<tbody><tr><td colspan="4" class="castlist_label"></td></tr>"
       #movie.url = "https://www.imdb.com/title/tt0078346/"
-        movie.superhero = true
-          movie
+        book.superhero = true
+          book
        end
      end
 
