@@ -1,4 +1,4 @@
-class Superman::CLI
+class Magicbook::CLI
 
 
    def call
