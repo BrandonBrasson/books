@@ -1,15 +1,15 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "imdb/version"
+require "book/version"
 
 Gem::Specification.new do |spec|
-spec.name          = "Imdb"
-spec.version       = Superman::VERSION
+spec.name          = "book"
+spec.version       = book::VERSION
 spec.authors       = ["'Brandon Brasson'"]
 spec.email         = ["'rocksong622@gmail.com'"]
 
-spec.summary       = %q{Imdb rocks}
+spec.summary       = %q{ rocks}
 spec.homepage      = "https://learn.co/tracks/full-stack-web-development-v5/object-oriented-ruby/final-projects/cli-data-gem-project"
 
 # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
