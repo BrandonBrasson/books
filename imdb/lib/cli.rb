@@ -2,18 +2,18 @@ class Superman::CLI
 
 
    def call
-    list_movie
+    list_books
     menu
     goodbye
   end
 
-      def list_movie
+      def list_books
     # here doc - "https://www.imdb.com/title/tt0078346/plotsummary?ref_=tt_stry_pl"
 
         puts "superman comes to save us all"
-        @movie = Superman::Movie.all
-        @movie.each.with_index(1) do |movie, i|
-        puts "#{i}. #{movie.name} - #{movie.plot} - #{movie.url}"
+        @movie = Superman::Book.all
+        @movie.each.with_index(1) do |travel , i|
+        puts "#{i}. #{travel.name} - #{travel.plot} - #{travel.url}"
     end
   end
 
@@ -28,9 +28,9 @@ class Superman::CLI
 
       if input.to_i > 0
         the_movie = @movie[input.to_i-1]
-        puts "#{the_movie.name} - #{the_movie.plot} - #{the_movie.url}"
+        puts "#{the_travel.name} - #{the_travel.plot} - #{the_travel.url}"
       elsif input == "list"
-        list_movie
+        list_books
       else
         puts "Not sure what you want, type list or exit."
       end
