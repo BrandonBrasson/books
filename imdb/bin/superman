@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
 require 'bundler/setup'
-require 'imdb'
+require 'books'
 
-Superman::CLI.new.call
+Magicbook::CLI.new.call
